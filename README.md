@@ -8,7 +8,7 @@ Welcome to my 100 Days of CSS Challenge repository! In this challenge, I'll be c
 - **Platform**: CodePen
 - **Start Date**: (01-11-2023)
 - **End Date**: (09-02-2024)
-- **Follow My Progress**: [https://codepen.io/Shaun-Furtado]
+- **Follow My Progress**: [Codepen](https://codepen.io/Shaun-Furtado)
 
 ## Daily Projects
 
