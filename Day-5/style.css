@@ -1,0 +1,329 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--red: #FA7373;
+	--blue: #7BA2FF;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #22C7C1;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.card {
+	width: 280px;
+	height: 220px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	border-radius: 3px;
+	box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.header {
+	width: 100%;
+	height: 60px;
+	background-color: #F1BA64;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	color: white;
+}
+
+.title-container {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+
+.title {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+	letter-spacing: .02rem;
+}
+
+.date {
+	font-size: 11px;
+	margin: 0;
+	font-weight: 400;
+	margin-top: 2px;
+}
+
+.revenue-container {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: right;
+}
+
+.revenue-heading {
+	display: block;
+	font-size: 11px;
+	font-weight: 400;
+}
+
+.revenue-total {
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 2px;
+}
+
+.graph-container {
+	padding: 15px 12px;
+}
+
+.legend {
+	display: flex;
+	justify-content: flex-end;
+	color: #606060;
+}
+
+.legend .red,
+.legend .blue {
+	font-size: 9px;
+}
+
+.legend .red {
+	position: relative;
+	line-height: 1;
+}
+
+.legend .red:before {
+	content: "";
+	width: 11px;
+	border-radius: 1px;
+	position: absolute;
+	top: 40%;
+	left: -20px;
+	border-top: 3px solid var(--red);
+}
+
+.legend .blue {
+	margin-left: 40px;
+	position: relative;
+}
+
+.legend .blue:before {
+	content: "";
+	width: 11px;
+	border-radius: 1px;
+	position: absolute;
+	top: 40%;
+	left: -20px;
+	border-top: 3px solid var(--blue);
+}
+
+.graph {
+	width: 100%;
+	position: relative;
+}
+
+.line {
+	background: #F2F2F2;
+	width: 100%;
+	height: 1px;
+}
+
+.line-1 {
+	margin-top: 15px;
+}
+
+.line-2 {
+	margin-top: 40px;
+}
+
+.line-3 {
+	margin-top: 40px;
+}
+
+.graph svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+polyline {
+	fill: none;
+	stroke-width: 2;
+	stroke-linecap: round;
+}
+
+.red polyline {
+	stroke: var(--red);
+}
+
+.blue polyline {
+	stroke: var(--blue);
+}
+
+.point {
+	cursor: pointer;
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	z-index: 2;
+	
+	&:hover .tooltip {
+		visibility: visible;
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}
+
+.red .point {
+	background: var(--red);
+}
+
+.red .point-1 {
+	left: 7px;
+	top: 43px;
+}
+
+.red .point-2 {
+	left: 47px;
+	top: 9px;
+}
+
+.red .point-3 {
+	left: 87px;
+	top: 20px;
+}
+
+.red .point-4 {
+	left: 127px;
+	top: 9px;
+}
+
+.red .point-5 {
+	left: 167px;
+	top: 36px;
+}
+
+.red .point-6 {
+	left: 207px;
+	top: 45px;
+}
+
+.red .point-7 {
+	left: 247px;
+	top: 17px;
+}
+
+.blue .point {
+	background: var(--blue);
+}
+
+.blue .point-1 {
+	left: 7px;
+	top: 58px;
+}
+
+.blue .point-2 {
+	left: 47px;
+	top: 47px;
+}
+
+.blue .point-3 {
+	left: 87px;
+	top: 62px;
+}
+
+.blue .point-4 {
+	left: 127px;
+	top: 52px;
+}
+
+.blue .point-5 {
+	left: 167px;
+	top: 59px;
+}
+
+.blue .point-6 {
+	left: 207px;
+	top: 72px;
+}
+
+.blue .point-7 {
+	left: 247px;
+	top: 61px;
+}
+
+.tooltip {
+	font-size: 11px;
+	color: #FFF;
+	position: absolute;
+	padding: 8px 6px;
+	border-radius: 4px;
+	left: 50%;
+	bottom: 13px;
+	visibility: hidden;
+	transform: translate(-50%, 10px);
+	opacity: 0;
+	transition: transform .4s ease-out, opacity .4s ease-out;
+}
+
+
+
+
+.tooltip:after {
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	transform: rotate(45deg);
+	left: 40%;
+	bottom: -3px;
+}
+
+.red .tooltip,
+.red .tooltip:after {
+	background: var(--red);
+}
+
+.blue .tooltip,
+.blue .tooltip:after {
+	background: var(--blue);
+}
+
+.days {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 9px;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #949494
+}
+
