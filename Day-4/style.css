@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #FF8584;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.circle1{
+	width: 100px;
+	height:100px;
+	border-radius: 50%;
+	background: #aaf;
+	box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.4);
+	animation: CircleOne 6s infinite ease;
+}
+
+.circle2 {
+	width: 70px;
+	height:70px;
+	border-radius: 50%;
+	background: #aaf;
+	position: absolute;
+	Top: 15px;
+	left: 15px;
+	box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.4);
+	animation: CircleTwo 6s infinite ease;
+}
+
+.circle3 {
+	width: 40px;
+	height:40px;
+	border-radius: 50%;
+	background: #aaf;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.4);
+	animation: CircleThree 6s infinite ease;
+}
+
+@keyframes CircleOne{
+	0%{ transform: scale(0)}
+	20%{ transform: scale(1)}
+	80%{ transform: scale(1)}
+	100%{ transform: scale(0)}
+}
+@keyframes Circletwo{
+	0%{ transform: scale(0)}
+	20%{ transform: scale(0)}
+	40%{ transform: scale(1)}
+	70%{ transform: scale(1)}
+	90%, 100%{transform: scale(0)}
+}
+@keyframes Circlethree{
+	0%{ transform: scale(0)}
+	40%{ transform: scale(0)}
+	50%{ transform: scale(1)}
+	60%{ transform: scale(1)}
+	80%, 100%{transform: scale(0)}
+}
