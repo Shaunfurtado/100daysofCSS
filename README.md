@@ -10,11 +10,6 @@ Welcome to my 100 Days of CSS Challenge repository! In this challenge, I'll be c
 - **End Date**: (09-02-2024)
 - **Follow My Progress**: [Codepen](https://codepen.io/Shaun-Furtado),[100DaysofCSS](https://100dayscss.com/progress/Shaun-Furtado/)
 
-## Daily Projects
-
-Here, you can find the list of my daily CSS projects, along with brief descriptions and links to view them on CodePen:
-
-1. [Day 1]([Link to Day 1 CodePen Project](https://codepen.io/Shaun-Furtado/pen/QWYEqbK)): Description of Day 1 project.
 
 Welcome to my 100 Days of CSS Challenge repository! In this challenge, I'll be creating and sharing CSS projects and experiments on a daily basis. You can follow my progress and check out the code for each project in this repository.
 
